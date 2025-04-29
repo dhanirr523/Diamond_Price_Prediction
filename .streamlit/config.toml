@@ -1,0 +1,5 @@
+[theme]
+primaryColor = "#9F8335"               # Gold terang
+backgroundColor = "#121212"            # Hitam solid (dark mode)
+secondaryBackgroundColor = "#1E1E1E"   # Abu gelap
+textColor = "#F0EAD6"                  # Krem terang
