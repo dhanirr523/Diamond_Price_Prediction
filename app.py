@@ -72,26 +72,26 @@ def main():
             with st.container():
                 tab3.markdown('<h1 style="color:#9F8335;">Tentang Berlian</h1>', unsafe_allow_html=True)
 
-                st.write("""
+                tab3.write("""
                         Tidak semua berlian diciptakan sama — setiap berlian itu unik. Berlian memiliki berbagai ukuran, bentuk, 
                         warna, dan karakteristik internal. Semua berlian yang sudah dipoles memiliki nilai, tergantung pada kombinasi 
                         beberapa faktor. Salah satu faktor utamanya adalah **kelangkaan** — semakin langka suatu karakteristik, semakin 
                         tinggi nilai berliannya.
                 """)
 
-                st.write("""
+                tab3.write("""
                         Untuk menilai dan membandingkan kualitas berlian, para profesional menggunakan sistem **4C** yang dikembangkan oleh **GIA 
                         (Gemological Institute of America)** pada tahun 1950-an. Sistem ini menjadi standar internasional dalam dunia perhiasan.
                 """)
 
-                st.write("Empat aspek utama dalam 4C adalah:")
+                tab3.write("Empat aspek utama dalam 4C adalah:")
 
-                st.write("- **Clarity (Kejernihan):** Seberapa bersih berlian dari inklusi atau cacat.")
-                st.write("- **Color (Warna):** Semakin tidak berwarna berlian, semakin tinggi nilainya.")
-                st.write("- **Cut (Potongan):** Kualitas potongan memengaruhi kilau dan keindahan berlian.")
-                st.write("- **Carat Weight (Berat Karat):** Ukuran berlian berdasarkan berat.")
+                tab3.write("- **Clarity (Kejernihan):** Seberapa bersih berlian dari inklusi atau cacat.")
+                tab3.write("- **Color (Warna):** Semakin tidak berwarna berlian, semakin tinggi nilainya.")
+                tab3.write("- **Cut (Potongan):** Kualitas potongan memengaruhi kilau dan keindahan berlian.")
+                tab3.write("- **Carat Weight (Berat Karat):** Ukuran berlian berdasarkan berat.")
 
-                st.write("""
+                tab3.write("""
                         Keempat aspek ini digunakan untuk menggambarkan kualitas dan menentukan nilai berlian. Berlian dengan kombinasi 4C yang lebih 
                         tinggi biasanya lebih langka dan lebih bernilai.
                 """)
