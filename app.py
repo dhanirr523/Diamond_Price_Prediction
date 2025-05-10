@@ -12,8 +12,8 @@ def main():
     with st.sidebar:
         selected = option_menu(
             menu_title="Main Menu",
-            options=["Home", "Prediksi", "Kontak"],
-            icons=["house", "diamond", "person lines fill"],
+            options=["Home", "Prediksi"],
+            icons=["house", "diamond"],
             menu_icon="list",
             default_index=0,
             styles={"container": {"background-color": "#1E1E1E"}}
@@ -43,14 +43,14 @@ def main():
             with st.container():
                 tab1.markdown('<h1 style="color:#9F8335;">Tentang Aplikasi</h1>', unsafe_allow_html=True)
                 tab1.write("""Diamond Price Prediction adalah sebuah aplikasi berbasis website yang berfungsi untuk memprediksi harga berlian berdasarkan atribut-atribut tertentu. 
-                            Pengguna dapat memasukkan informasi tentang warna (color), potongan (cut), kejernihan (clarity), carat, serta dimensi (x, y, z) dari berlian. 
+                            Pengguna dapat memasukkan informasi tentang warna (color), potongan (cut), kejernihan (clarity), carat, serta dimensi (depth, table, x, y, z) dari berlian. 
                             Saat ini, aplikasi ini dapat memberikan estimasi harga berlian yang akurat berdasarkan data yang diberikan. Aplikasi ini masih dalam tahap pengembangan 
                             dan tentunya membutuhkan kritik serta saran dari pengguna untuk penyempurnaan lebih lanjut.
                 """)
             with st.container():
                 tab2.markdown('<h1 style="color:#9F8335;">Cara Menggunakan Aplikasi</h1>', unsafe_allow_html=True)
                 tab2.markdown('<h3 style="color:#9F8335;">Langkah 1: Masukkan Informasi Berlian</h3', unsafe_allow_html=True)
-                tab2.write("1. Pilih atribut berlian yang ingin Anda prediksi harganya, seperti warna (color), potongan (cut), kejernihan (clarity), carat, dan dimensi (x, y, z).")
+                tab2.write("1. Pilih atribut berlian yang ingin Anda prediksi harganya, seperti warna (color), potongan (cut), kejernihan (clarity), carat, dan dimensi (depth, table, x, y, z).")
                 tab2.write("2. Masukkan nilai untuk setiap atribut berdasarkan berlian yang Anda miliki.")
                 tab2.write("3. Pastikan semua informasi telah diisi dengan benar sebelum melanjutkan.")
                 tab2.image('assets/tahapan_1.gif')
@@ -58,12 +58,12 @@ def main():
                 tab2.markdown('<h3 style="color:#9F8335;">Langkah 2: Lakukan Prediksi Harga</h3', unsafe_allow_html=True)
                 tab2.write("1. Klik tombol 'Prediksi Harga' untuk memulai proses prediksi.")
                 tab2.write("2. Tunggu beberapa saat hingga aplikasi selesai menghitung dan memberikan estimasi harga berlian.")
-                tab2.write("3. Prediksi harga akan ditampilkan di halaman Hasil Prediksi.")
+                tab2.write("3. Prediksi harga akan ditampilkan di halaman yang sama.")
                 tab2.image('assets/tahapan_2.gif')
 
                 tab2.markdown('<h3 style="color:#9F8335;">Langkah 3: Tinjau Hasil Prediksi</h3', unsafe_allow_html=True)
-                tab2.write("1. Di halaman Hasil Prediksi, Anda akan melihat estimasi harga berlian berdasarkan data yang telah dimasukkan.")
-                tab2.write("2. Jika tersedia, Anda juga akan melihat penjelasan mengenai faktor-faktor yang mempengaruhi prediksi harga berlian.")
+                tab2.write("1. Di halaman Prediksi, Anda akan melihat estimasi harga berlian berdasarkan data yang telah dimasukkan.")
+                tab2.write("2. Selain itu, pada halaman ini juga menampilkan data yang Anda masukkan sebelumnya.")
                 tab2.image('assets/tahapan_3.gif')
                 
                 tab2.markdown('<h3 style="color:#9F8335;">Catatan:</h3', unsafe_allow_html=True)
@@ -96,13 +96,15 @@ def main():
                         tinggi biasanya lebih langka dan lebih bernilai.
                 """)
 
+                col4, col5, col6 = tab3.columns([1, 2, 1])
+
+                with col5:
+                    tab3.image('assets/legend_diamond.png', use_container_width=True)
+                
+                tab3.markdown("Selengkapnya mengenai berlian(https://www.gia.edu/diamond-quality-factor)")
+
     elif selected == "Prediksi":
         prediksi.run_ml_app()
-
-    elif selected == "Kontak":
-        st.title("Kontak")
-        st.write("Email:")
-        st.write("Instagram: ")
 
 
     #footer aplikasi
