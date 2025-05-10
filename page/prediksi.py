@@ -3,13 +3,13 @@ import numpy as np
 import pandas as pd
 import pickle
 
-with open('xgbr_tunned_model.pkl', 'rb') as file:
+with open('model/xgbr_tunned_model.pkl', 'rb') as file:
     XGBR_model = pickle.load(file)
 
-with open('scaler.pkl', 'rb') as file:
+with open('model/scaler.pkl', 'rb') as file:
     scaler = pickle.load(file)
 
-with open('ordinal_encoder.pkl', 'rb') as file:
+with open('model/ordinal_encoder.pkl', 'rb') as file:
     ordinal_encoder = pickle.load(file)
     
 def run_ml_app():
